@@ -1,0 +1,4 @@
+<head>metadatos "lo que no se ve"
+<title> Texto de titulo para el budcador
+La etiqueta de HTML ENLAZAR <style>, se coloca dentro de head. 
+La etiqueta de HTML es <script>, se coloca antes de terminar el body.
