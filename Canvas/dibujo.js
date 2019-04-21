@@ -12,7 +12,7 @@ for(i=0;i<30;i++){//Boque Azul For
      //console.log("Linea"+i); //probar ciclo
 }
 
-i=0;//bloque Rojo While
+i=0;//Bloque Rojo While
 xFin=300;
 while(i<30){
     yIni=0;

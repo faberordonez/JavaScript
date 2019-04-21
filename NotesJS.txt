@@ -1,4 +1,24 @@
+_____
+ HTML
+-----
 <head>metadatos "lo que no se ve"
 <title> Texto de titulo para el budcador
 La etiqueta de HTML ENLAZAR <style>, se coloca dentro de head. 
 La etiqueta de HTML es <script>, se coloca antes de terminar el body.
+<script src="NombreArchivo.js"></script>//Enlazar documento Javascript
+_______________________________________________________________________
+
+_____
+ JS
+-----
+
+Variables
+----------
+- Primer Caracter en nombre de variable no puede ser numero
+- Mayusculas y minusculas son diferentes
+var=$x; var=_x; var=x; Funcionan
+
+Imprimir Valores
+------------------
+document.write("Mensaje" +variable+"Mensaje2");//En el documento
+alert("Mensaje" +variable);//En ventana emergente
