@@ -1,43 +1,64 @@
-var texto=document.getElementById("texto_lineas");
-var boton=document.getElementById("botoncito");
-var d = document.getElementById("dibujito");
-var lienzo = d.getContext("2d");
+var tagCanvas = document.getElementById("dibujo");//Captura etiqueta HTML
+var lienzo = tagCanvas.getContext("2d");
 
-for(i=0;i<30;i++){//Boque Azul For
-    yIni=0;
-    xFin=10;
-    yIni=10*i;
-    xFin=10*i;
-    dibujarLinea("blue",0,yIni,xFin,300);
-     //console.log("Linea"+i); //probar ciclo
-}
+var tagNumLineas = document.getElementById("numLineasUser");//Captura Tag Num Lineas
+var tagColor = document.getElementById("color");
+var tagBoton = document.getElementById("boton");
+tagBoton.addEventListener("click", dibujarEstrella);//Pone la funcion a la escucha
 
-i=0;//Bloque Rojo While
-xFin=300;
-while(i<30){
-    yIni=0;
-    yIni=i*10;
-    xFin=xFin-10;
-    dibujarLinea("red",300,yIni,xFin,300);
-    i++;
-}
+tagLimpiar=document.getElementById("limpiar");//Tag Limpiar Canvas
+tagLimpiar.addEventListener("click",limpiarCanvas);//Evento Click a la escuchas
 
-i=0;//Bloque verde Do-While
-xIni=0;
-yFin=300;
-do{
-    xIni=i*10;
-    yFin=yFin-10;
-    dibujarLinea("green",xIni,0,0,yFin);
-   i++;
-}while(i<30);
-
-
-function dibujarLinea(color, xInicial, yInicial, xFinal, yFinal ) {
+function dibujarLinea(color, xInicial, yInicial, xFinal, yFinal) {
     lienzo.beginPath();//Inicia el trazo
     lienzo.strokeStyle = color;//Color
-    lienzo.moveTo(xInicial,yInicial);//Punto inicial
-    lienzo.lineTo(xFinal,yFinal);//punto final
+    lienzo.moveTo(xInicial, yInicial);//Punto inicial
+    lienzo.lineTo(xFinal, yFinal);//punto final
     lienzo.stroke();//asigna el color de arriba
     lienzo.closePath();//cierra el camino
-} 
+}
+function dibujarEstrella() {
+    var colorUser=tagColor.value;
+    var anchoCanvas=tagCanvas.width;
+    numLineas = tagNumLineas.value;
+    inc = (anchoCanvas / numLineas) / 2;
+
+    yi = 0; xf = 150;//Superior Izqda
+    for (i = 0; i < numLineas; i++) {
+        xi = 150;
+        yf = 150;
+        dibujarLinea(colorUser, xi, yi, xf, yf);
+        yi = yi + inc;
+        xf = xf - inc;
+    }
+
+    yi = 150; xf = 300;//superior Dcha
+    for (i = 0; i < numLineas; i++) {
+        xi = 150;
+        yf = 150;
+        dibujarLinea(colorUser, xi, yi, xf, yf);
+        yi = yi - inc;
+        xf = xf - inc;
+    }
+    xi = 150; yf = 300;//inferior dcha
+    for (i = 0; i < numLineas; i++) {
+        yi = 150;
+        xf = 150;
+        dibujarLinea(colorUser, xi, yi, xf, yf);
+        xi = xi + inc;
+        yf = yf - inc;
+    }
+
+    xi = 0; yf = 150;//inferior Izda
+    for (i = 0; i < numLineas; i++) {
+        yi = 150;
+        xf = 150;
+        dibujarLinea(colorUser, xi, yi, xf, yf);
+        xi = xi + inc;
+        yf = yf + inc;
+    }
+
+}
+function limpiarCanvas(){
+    lienzo.clearRect(0, 0, tagCanvas.width, tagCanvas.height);
+}
