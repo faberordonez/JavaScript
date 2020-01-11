@@ -17,6 +17,7 @@ function dibujarLinea(color, xInicial, yInicial, xFinal, yFinal) {
     lienzo.stroke();//asigna el color de arriba
     lienzo.closePath();//cierra el camino
 }
+
 function dibujarEstrella() {
     var colorUser=tagColor.value;
     var anchoCanvas=tagCanvas.width;

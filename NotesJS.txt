@@ -2,7 +2,7 @@ _____
  HTML
 -----
 <head>metadatos "lo que no se ve"
-<title> Texto de titulo para el budcador
+<title> Texto de titulo para el buscador
 La etiqueta de HTML ENLAZAR <style>, se coloca dentro de head. 
 La etiqueta de HTML es <script>, se coloca antes de terminar el body.
 <script src="NombreArchivo.js"></script>//Enlazar documento Javascript
