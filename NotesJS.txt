@@ -22,3 +22,12 @@ Imprimir Valores
 ------------------
 document.write("Mensaje" +variable+"Mensaje2");//En el documento
 alert("Mensaje" +variable);//En ventana emergente
+
+Arrays 
+------
+insertar Valores
+nomArray.push("Ultimo");
+
+Agregar Imagenes aL Document
+---------------------------
+Se usa document.appendChild(nomImagen);

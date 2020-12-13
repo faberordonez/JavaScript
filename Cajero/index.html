@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style="font-family: roboto;">
+    <div class="container">
+        <h1>
+            Cajero Automatico
+        </h1>
+        <img src="files/cajero.gif" alt="">
+        <p id="dineroDisponible"></p>
+        <p>
+            <input type="number" id="valor" placeholder="Ingrese Valor a retirar">
+            <input type="button" value="Retirar" onclick="contarBilletes()"></p>
+        <p id="resultado"></p>
+    </div>
+    <div class="container">
+        <h2>Transacciones</h2>
+        <h3 id="transaccion"></h3>
+    </div>
+    
+    <script src="billete.js"></script>
+    <script src="cajero.js"></script>
+
+    <style>
+        body{
+            background-color: darkgray;
+        }
+
+    </style>
+</body>
+
+</html>
